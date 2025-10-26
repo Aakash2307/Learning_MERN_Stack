@@ -1,0 +1,60 @@
+# Async JavaScript Fundamentals
+
+## What is Asynchronous JavaScript?
+
+**Synchronous (Sync):** Code runs line by line, each line waits for the previous one to finish (blocking).
+
+**Asynchronous (Async):** Code doesn't wait for slow operations, continues running (non-blocking).
+
+## Why Do We Need Async?
+
+- File operations take time
+- Network requests take time
+- Database queries take time
+- We don't want to freeze the entire program while waiting
+
+## Synchronous vs Asynchronous
+
+### Synchronous Example
+```javascript
+console.log("First");
+console.log("Second");
+console.log("Third");
+// Output: First, Second, Third
+```
+
+### Asynchronous Example
+```javascript
+console.log("First");
+setTimeout(() => console.log("Second"), 2000);
+console.log("Third");
+// Output: First, Third, Second (after 2 seconds)
+```
+
+## The Event Loop
+
+JavaScript uses an **Event Loop** to handle async operations:
+
+1. Run all synchronous code first
+2. Async operations wait in a queue
+3. When sync code is done, async callbacks execute
+
+## Common Async Operations
+
+- `setTimeout()` / `setInterval()`
+- File I/O (`fs.readFile`, `fs.writeFile`)
+- HTTP requests (`fetch`, `axios`)
+- Database queries
+
+## Three Ways to Handle Async
+
+1. **Callbacks** (traditional)
+2. **Promises** (modern)
+3. **Async/Await** (cleanest)
+
+## Key Takeaways
+
+✅ Async code prevents blocking
+✅ Event loop manages async operations
+✅ Sync code runs before async code
+✅ Use async for time-consuming operations
