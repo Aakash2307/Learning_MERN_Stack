@@ -16,7 +16,7 @@ console.log("Fetching your api data ")
 setTimeout(()=>{
     const user = {
         name : "sky" ,
-        email : "tmkc@gmail.com"
+        email : "tmkc@gmail.com hey "
 
     };
     console.log("Data has been recieved " , user)
